@@ -5,7 +5,13 @@ class AppBody extends Component {
     render() {
         return (
             <div className="AppBody">
-                AppBody
+                <form>
+                    <label>
+                        Name:
+                        <input type="text" name="name" />
+                    </label>
+                    <input type="submit" value="Submit" />
+                </form>
             </div>
         );
     }

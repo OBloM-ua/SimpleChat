@@ -4,6 +4,13 @@ body {
   font-family: sans-serif;
 }
 
+.LoginPage{
+  background-color: #333333;
+  height: 100px;
+  width: 300px;
+  margin: auto;
+}
+
 ul.AppHeader {
   position: fixed;
   top: 0;

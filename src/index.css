@@ -44,7 +44,8 @@ ul.AppHeader li.right {float: right;}
   background-color: darkgoldenrod;
 
 }
-.NewMessege{
+
+.NewMessage{
   position: fixed;
   bottom: 0;
   width: 100%;

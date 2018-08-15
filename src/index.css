@@ -25,7 +25,7 @@ ul.AppHeader li a {
   text-decoration: none;
 }
 
-ul.AppHeader li a:hover:not(.active) {background-color: #111;}
+ul.AppHeader li a:hover:not(.active) {background-color: #52e356;}
 
 ul.AppHeader li a.active {background-color: #4CAF50;}
 
@@ -70,4 +70,8 @@ input[type=text] {
   text-decoration: none;
   margin: 4px 10px;
   cursor: pointer;
+}
+.inputButton:hover {
+  background-color: #52e356;
+
 }

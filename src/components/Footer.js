@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import '../index.css';
 import * as firebase from 'firebase';
 
+
 class Footer extends Component {
     constructor(props) {
         super(props);
@@ -11,13 +12,14 @@ class Footer extends Component {
     }
     sendMessage(){
         if(this.state.text === '') return;
-        let ref = firebase.database().ref('massages');
-        ref.push({text: this.state.text, timestamp: Date.now(), user: "galeta"})
+        const ref = firebase.database().ref('messages');
+        ref.push({text: this.state.text, timestamp: Date.now(), user: 'galeta'});
+        console.log(this.state.text);
+
     }
 
     handleChange(event) {
         this.setState({text: event.target.value});
-        console.log(event.target.value);
 
     }
 
@@ -26,7 +28,7 @@ class Footer extends Component {
             <div className="Footer">
                     Message:
                 <input type="text" value={this.state.text} onChange={this.handleChange.bind(this)}/>
-                <button className="inputButton" onClick={this.sendMessage.bind(this)}>send</button>
+                <button className="inputButton" onClick={this.sendMessage.bind(this)}>Send</button>
             </div>
         );
     }

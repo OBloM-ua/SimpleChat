@@ -18,8 +18,8 @@ class Footer extends Component {
 
     }
 
-    handleChange(event) {
-        this.setState({text: event.target.value});
+    handleChange(e) {
+        this.setState({text: e.target.value});
 
     }
 

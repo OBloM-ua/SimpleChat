@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../index.css';
-import NewMessege from "./NewMessage";
+import NewMessege from "./Footer";
 
 class AppBody extends Component {
     render() {

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import '../index.css';
 import * as firebase from 'firebase';
 
-class NewMessage extends Component {
+class Footer extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -23,14 +23,13 @@ class NewMessage extends Component {
 
     render() {
         return (
-            <div className="NewMessage">
+            <div className="Footer">
                     Message:
                 <input type="text" value={this.state.text} onChange={this.handleChange.bind(this)}/>
-
-                <button onClick={this.sendMessage.bind(this)}>send</button>
+                <button className="inputButton" onClick={this.sendMessage.bind(this)}>send</button>
             </div>
         );
     }
 }
 
-export default NewMessage;
+export default Footer;

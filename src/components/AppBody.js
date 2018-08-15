@@ -6,57 +6,42 @@ class AppBody extends Component {
     constructor() {
         super();
         this.state = {
-            massages: []
+            messages: []
         };
-        this.handleChange = this.handleChange.bind(this);
     }
-
-    handleChange(e) {
-        this.setState({[e.target.name]: e.target.value});
-    }
-
-
 
     componentDidMount() {
         const ref = firebase.database().ref('messages');
         ref.on('value', (snapshot) => {
-            let massages = snapshot.val();
+            let messages = snapshot.val();
             let newState = [];
-            for (let sms_id in massages) {
+            for (let sms_id in messages) {
                 newState.push({
                     id: sms_id,
-                    text: massages[sms_id].text,
-                    user: massages[sms_id].user
+                    user: messages[sms_id].user,
+                    text: messages[sms_id].text,
+                    timestamp: messages[sms_id].timestamp
                 });
             }
             this.setState({
-                massages: newState
+                messages: newState
             });
         });
     }
 
-
     render() {
-        // const ref = firebase.database().ref('messages');
-        //
-        // ref.on('value', (snapshot) => {
-        //     console.log(snapshot.val());
-        // });
-
         return (
-            <section className='AppBody'>
-                <div className="wrapper">
-                    <ul>
-                        {this.state.massages.map((item) => {
-                            return (
-                                <li key={item.id}>
-                                    <h3>{item.text}</h3>
-                                </li>
-                            )
-                        })}
-                    </ul>
-                </div>
-            </section>
+            <div className="AppBody">
+                <ul>
+                    {this.state.messages.map((item) => {
+                        return (
+                            <li key={item.id}>
+                                <h4>{item.text}</h4>
+                            </li>
+                        )
+                    })}
+                </ul>
+            </div>
         );
     }
 }

@@ -45,6 +45,14 @@ ul.AppHeader li.right {float: right;}
 
 }
 
+.display-item{
+  margin-top: 46px;
+  width: 100%;
+  height: 500px;
+  background-color: seashell;
+
+}
+
 .Footer{
   position: fixed;
   bottom: 0;

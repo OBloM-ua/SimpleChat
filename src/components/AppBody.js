@@ -36,7 +36,7 @@ class AppBody extends Component {
                     {this.state.messages.map((item) => {
                         return (
                             <li key={item.id}>
-                                <h4>{item.text}</h4>
+                                {item.user} <br/><b>{item.text}</b>
                             </li>
                         )
                     })}

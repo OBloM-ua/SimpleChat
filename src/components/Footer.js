@@ -27,7 +27,7 @@ class Footer extends Component {
         return (
             <div className="Footer">
                     Message:
-                <input type="text" value={this.state.text} onChange={this.handleChange.bind(this)}/>
+                <input type="text" value={this.state.text} onChange={this.handleChange.bind(this)} placeholder="Enter your message"/>
                 <button className="inputButton" onClick={this.sendMessage.bind(this)}>Send</button>
             </div>
         );

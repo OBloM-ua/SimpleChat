@@ -40,7 +40,10 @@ ul.AppHeader li a:hover {background-color: #4CAF50;}
 
 ul.AppHeader li a.active {background-color: #4CAF50;}
 
-ul.AppHeader li.right {float: right;}
+ul.AppHeader li.right {
+  cursor: pointer;
+  float: right;
+}
 
 @media screen and (max-width: 600px){
   ul.AppHeader li.right,
@@ -82,4 +85,9 @@ input[type=text] {
 .inputButton:hover  {
   background-color: #52e356;
 
+}
+
+.LoginText {
+  margin-top:  100px;
+  font-size: xx-large;
 }

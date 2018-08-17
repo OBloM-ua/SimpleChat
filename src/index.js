@@ -11,6 +11,7 @@ const config = {
     projectId: "simplechat-12",
     storageBucket: "simplechat-12.appspot.com",
     messagingSenderId: "841403808599"
+
 };
 firebase.initializeApp(config);
 

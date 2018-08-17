@@ -21,7 +21,7 @@ class Footer extends Component {
         this.setState({text: e.target.value});
     }
 
-    handleKeyPress(e) {
+    onClickEnter(e) {
         if (e.charCode === 13) {
             this.sendMessage();
         }
@@ -31,7 +31,7 @@ class Footer extends Component {
         return (
             <div className="Footer">
                 Message:
-                <input type="text" onKeyPress={this.handleKeyPress.bind(this)} value={this.state.text}
+                <input type="text" onKeyPress={this.onClickEnter.bind(this)} value={this.state.text}
                        onChange={this.handleChange.bind(this)} placeholder="Enter your message"/>
                 <button className="inputButton" onClick={this.sendMessage.bind(this)}>Send</button>
             </div>

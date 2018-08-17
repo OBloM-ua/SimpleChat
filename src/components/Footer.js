@@ -8,8 +8,9 @@ class Footer extends Component {
         super(props);
         this.state = {text: ''};
     }
-    sendMessage(){
-        if(this.state.text === '') return;
+
+    sendMessage() {
+        if (this.state.text === '') return;
         const ref = firebase.database().ref('messages');
         ref.push({text: this.state.text, timestamp: Date.now(), user: 'galeta'});
         console.log(this.state.text);
@@ -18,14 +19,20 @@ class Footer extends Component {
 
     handleChange(e) {
         this.setState({text: e.target.value});
+    }
 
+    handleKeyPress(e) {
+        if (e.charCode === 13) {
+            this.sendMessage();
+        }
     }
 
     render() {
         return (
             <div className="Footer">
-                    Message:
-                <input type="text" value={this.state.text} onChange={this.handleChange.bind(this)} placeholder="Enter your message"/>
+                Message:
+                <input type="text" onKeyPress={this.handleKeyPress.bind(this)} value={this.state.text}
+                       onChange={this.handleChange.bind(this)} placeholder="Enter your message"/>
                 <button className="inputButton" onClick={this.sendMessage.bind(this)}>Send</button>
             </div>
         );

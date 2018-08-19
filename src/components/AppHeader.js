@@ -3,9 +3,6 @@ import '../index.css';
 import PropTypes from 'prop-types';
 
 class AppHeader extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     propTypes = {
         user: PropTypes.object,

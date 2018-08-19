@@ -21,11 +21,11 @@ class App extends Component {
                 // User is signed in.
                 const displayName = user.displayName;
                 const email = user.email;
-                const emailVerified = user.emailVerified;
                 const photoURL = user.photoURL;
-                const isAnonymous = user.isAnonymous;
                 const uid = user.uid;
-                const providerData = user.providerData;
+
+                const ref = firebase.database().ref('users');
+                ref.push({displayName: displayName, email: email, photoURL: photoURL, uid: uid});
             } else {
                 console.log("user is logged OUT");
                 // User is signed out.
@@ -56,7 +56,7 @@ class App extends Component {
     }
 
     logOut() {
-        console.log("logOut")
+        console.log("logOut");
         firebase.auth().signOut().then(function () {
             // Sign-out successful.
             this.setState({user: undefined})
@@ -80,7 +80,9 @@ class App extends Component {
                         <Footer/>
                     </div>
                     :
-                    <div className="LoginText">Please LogIn</div>}
+                    <div className="LoginText">Please LogIn
+                        {/*<button> <img src="./img/btn_google_signin_light_normal_web@2x.png" /> <div> Click Me </div> </button>*/}
+                    </div>}
 
             </div>
         );

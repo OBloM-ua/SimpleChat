@@ -76,6 +76,7 @@ class App extends Component {
                     </div>
                     :
                     <div className="LoginText">Please LogIn
+                        <button className='GoogleLoginButton' onClick={this.logIn.bind(this)}/>
                     </div>}
 
             </div>

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 class AppHeader extends Component {
 
-    propTypes = {
+    propTypes = { //Перевіряє що об'єкт отримує
         user: PropTypes.object,
         logInAction: PropTypes.func,
         logOutAction: PropTypes.func
@@ -12,7 +12,6 @@ class AppHeader extends Component {
 
 
     render() {
-
 
         return (
             <ul className="AppHeader">

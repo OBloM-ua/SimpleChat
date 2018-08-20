@@ -96,3 +96,11 @@ input[type=text] {
   justify-content: center;
   align-items: center;
 }
+
+.GoogleLoginButton{
+  background: url("img/btn_google_signin_light_normal_web@2x.png") no-repeat center;
+  background-size: 100%;
+  width: 324px;
+  height: 72px;
+  cursor: pointer;
+}

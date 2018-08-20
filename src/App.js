@@ -19,13 +19,6 @@ class App extends Component {
                 console.log("user is logged IN");
                 this.setState({user: user});
                 // User is signed in.
-                const displayName = user.displayName;
-                const email = user.email;
-                const photoURL = user.photoURL;
-                const uid = user.uid;
-
-                const ref = firebase.database().ref('users');
-                ref.push({displayName: displayName, email: email, photoURL: photoURL, uid: uid});
             } else {
                 console.log("user is logged OUT");
                 // User is signed out.
@@ -42,6 +35,8 @@ class App extends Component {
             // The signed-in user info.
             const user = result.user;
             //
+            const ref = firebase.database().ref('users');
+            ref.push({displayName: user.displayName, email:  user.email, photoURL:  user.photoURL, uid:  user.uid});
             // ...
         }).catch(function (error) {
             // Handle Errors here.
@@ -69,10 +64,10 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <AppHeader user={this.state.user}
-                           logInAction={this.logIn.bind(this)}
-                           logOutAction={this.logOut.bind(this)}
-                />
+                {/*<AppHeader user={this.state.user}*/}
+                           {/*logInAction={this.logIn.bind(this)}*/}
+                           {/*logOutAction={this.logOut.bind(this)}*/}
+                {/*/>*/}
 
                 {this.state.user ?
                     <div>
@@ -81,7 +76,6 @@ class App extends Component {
                     </div>
                     :
                     <div className="LoginText">Please LogIn
-                        {/*<button> <img src="./img/btn_google_signin_light_normal_web@2x.png" /> <div> Click Me </div> </button>*/}
                     </div>}
 
             </div>

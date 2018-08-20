@@ -88,8 +88,11 @@ input[type=text] {
 }
 
 .LoginText {
-  margin-top:  100px;
-  font-size: xx-large;
-  text-align: center;
+  background-color: #4CAF50;
+  height: 100%;
   width: 100%;
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

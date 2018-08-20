@@ -64,10 +64,10 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                {/*<AppHeader user={this.state.user}*/}
-                           {/*logInAction={this.logIn.bind(this)}*/}
-                           {/*logOutAction={this.logOut.bind(this)}*/}
-                {/*/>*/}
+                <AppHeader user={this.state.user}
+                           logInAction={this.logIn.bind(this)}
+                           logOutAction={this.logOut.bind(this)}
+                />
 
                 {this.state.user ?
                     <div>

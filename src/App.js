@@ -65,7 +65,7 @@ class App extends Component {
         return (
             <div className="App">
                 <AppHeader user={this.state.user}
-                           logInAction={this.logIn.bind(this)}
+                           logInAction={this.logIn.bind(this)} //передаю в гедер функції singIn signOut
                            logOutAction={this.logOut.bind(this)}
                 />
 
@@ -75,9 +75,9 @@ class App extends Component {
                         <Footer/>
                     </div>
                     :
-                    <div className="LoginText">Please LogIn
-                        <button className='GoogleLoginButton' onClick={this.logIn.bind(this)}/>
-                    </div>}
+                    <h1 className="LoginText">Please LogIn
+
+                    </h1>}
 
             </div>
         );

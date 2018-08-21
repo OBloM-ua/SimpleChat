@@ -30,7 +30,6 @@ ul.AppHeader li {float: left;}
 ul.AppHeader li a {
   display: block;
   color: white;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
@@ -40,8 +39,12 @@ ul.AppHeader li a:hover {background-color: #4CAF50;}
 ul.AppHeader li a.active {background-color: #4CAF50;}
 
 ul.AppHeader li.right {
+  width: 120px;
   cursor: pointer;
   float: right;
+  text-align: right;
+  background: url("img/btn_google_light_normal_ios.svg") no-repeat -1px ;
+
 }
 
 @media screen and (max-width: 600px){
@@ -82,16 +85,13 @@ input[type=text] {
   margin: 4px 10px;
   cursor: pointer;
 }
-.inputButton:hover  {
-  background-color: #52e356;
 
-}
 
 .LoginText {
   background-color: #4CAF50;
   height: 100%;
   width: 100%;
-  font-size: xx-large;
+  font-family: fantasy;
   display: flex;
   justify-content: center;
   align-items: center;

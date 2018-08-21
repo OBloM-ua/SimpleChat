@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../index.css';
 import * as firebase from 'firebase';
+import Message from "./Message";
 
 class AppBody extends Component {
     constructor() {
@@ -33,17 +34,12 @@ class AppBody extends Component {
         return (
             <div className="AppBody">
                 <ul>
-                    {this.state.messages.map((item) => {
-                        return (
-                            <li key={item.id}>
-                                {item.user} <br/><b>{item.text}</b>
-                            </li>
-                        )
-                    })}
+                    <Message messages={this.state.messages}/>
                 </ul>
             </div>
         );
     }
+
 }
 
 export default AppBody;

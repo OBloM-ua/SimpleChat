@@ -20,10 +20,10 @@ class AppHeader extends Component {
                         <li><a className="active" href="/">Home</a></li>
                         <li><a href="/">Contact</a></li>
                         <li><a href="/">About</a></li>
-                        <li className="right" onClick={this.props.logOutAction}><a>LogOut</a></li>
+                        <li className="rightOut" onClick={this.props.logOutAction}><a>LogOut</a></li>
                     </div>
                     :
-                    <li className="right" onClick={this.props.logInAction}><a>LogIn</a></li>
+                    <li className="rightIn" onClick={this.props.logInAction}><a>LogIn</a></li>
                 }
 
             </ul>

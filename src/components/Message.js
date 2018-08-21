@@ -10,7 +10,7 @@ class Message extends Component {
     render() {
 
         return (
-            <ul className="Message">
+            <ul className="Messages">
                     {this.props.messages.map((item) => {
                         return (
                             <li key={item.id}>

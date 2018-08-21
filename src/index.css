@@ -38,13 +38,16 @@ ul.AppHeader li a:hover {background-color: #4CAF50;}
 
 ul.AppHeader li a.active {background-color: #4CAF50;}
 
-ul.AppHeader li.right {
+ul.AppHeader li.rightOut {
+  cursor: pointer;
+  float: right;
+}
+ul.AppHeader li.rightIn {
   width: 120px;
   cursor: pointer;
   float: right;
   text-align: right;
   background: url("img/btn_google_light_normal_ios.svg") no-repeat -1px ;
-
 }
 
 @media screen and (max-width: 600px){
@@ -89,18 +92,17 @@ input[type=text] {
 
 .LoginText {
   background-color: #4CAF50;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   font-family: fantasy;
+  font-size: 450%;
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
-.GoogleLoginButton{
-  background: url("img/btn_google_signin_light_normal_web@2x.png") no-repeat center;
-  background-size: 100%;
-  width: 324px;
-  height: 72px;
-  cursor: pointer;
+.Messages{
+  background-color: aqua;
+  border: antiquewhite;
 }

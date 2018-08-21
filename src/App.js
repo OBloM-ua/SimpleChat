@@ -75,9 +75,9 @@ class App extends Component {
                         <Footer/>
                     </div>
                     :
-                    <h1 className="LoginText">Please LogIn
+                    <div className="LoginText">Please LogIn
 
-                    </h1>}
+                    </div>}
 
             </div>
         );

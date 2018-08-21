@@ -7,8 +7,7 @@ class Footer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            text: '',
-            // users: []
+            text: ''
         };
     }
 
@@ -29,24 +28,6 @@ class Footer extends Component {
             this.sendMessage();
         }
     }
-    // componentDidMount() {
-    //     const ref = firebase.database().ref('users');
-    //     ref.on('value', (snapshot) => {
-    //         let users = snapshot.val();
-    //         let newState = [];
-    //         for (let sms_id in users) {
-    //             newState.push({
-    //                 id: sms_id,
-    //                 displayName: users[sms_id].displayName,
-    //                 email: users[sms_id].email,
-    //                 photoURL: users[sms_id].photoURL
-    //             });
-    //         }
-    //         this.setState({
-    //             messages: newState
-    //         });
-    //     });
-    // }
 
     render() {
         return (

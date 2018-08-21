@@ -3,22 +3,17 @@ import '../index.css';
 import PropTypes from 'prop-types';
 
 class Message extends Component {
-    propTypes = { //Перевіряє що об'єкт отримує
-        messages: PropTypes.object,
+    static propTypes = { //Перевіряє що об'єкт отримує
+        message: PropTypes.object,
     };
 
     render() {
 
         return (
-            <ul className="Messages">
-                    {this.props.messages.map((item) => {
-                        return (
-                            <li key={item.id}>
-                                {item.user} <br/><b>{item.text}</b>
-                            </li>
-                        )
-                    })}
-                </ul>
+            <div className="Message">
+                    {this.props.message.user} <br/><b>{this.props.message.text}</b>
+
+            </div>
         );
     }
 }

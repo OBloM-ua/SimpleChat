@@ -30,16 +30,25 @@ class AppBody extends Component {
         });
     }
 
+    getMessages() {
+        return this.state.messages.map(message => {
+             return <li key={message.id}>
+                <Message message={message}/>
+
+            </li>
+
+        });
+    }
+
     render() {
         return (
             <div className="AppBody">
                 <ul>
-                    <Message messages={this.state.messages}/>
+                    {this.getMessages()}
                 </ul>
             </div>
         );
     }
-
 }
 
 export default AppBody;

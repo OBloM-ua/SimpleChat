@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 class AppHeader extends Component {
 
-    propTypes = { //Перевіряє що об'єкт отримує
+    static propTypes = { //Перевіряє що об'єкт отримує
         user: PropTypes.object,
         logInAction: PropTypes.func,
         logOutAction: PropTypes.func

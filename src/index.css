@@ -34,7 +34,14 @@ ul.AppHeader li a {
   text-decoration: none;
 }
 
-ul.AppHeader li a:hover {background-color: #4CAF50;}
+ul.AppHeader li a:hover {
+  background-color: #4CAF50;
+
+}
+ul.AppHeader li.rightIn a:hover {
+  background: url("img/btn_google_light_normal_ios.svg") no-repeat -1px ;
+
+}
 
 ul.AppHeader li a.active {background-color: #4CAF50;}
 

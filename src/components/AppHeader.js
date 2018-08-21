@@ -12,15 +12,26 @@ class AppHeader extends Component {
 
 
     render() {
+        {
+            console.log(this.props.user);
+        } // https://lh5.googleusercontent.com/-_UkoFl2E8lw/AAAAAAAAAAI/AAAAAAAAfoU/KcUGTwdnIfg/photo.jpg
 
         return (
             <ul className="AppHeader">
+
                 {this.props.user ?
                     <div>
                         <li><a className="active" href="/">Home</a></li>
                         <li><a href="/">Contact</a></li>
                         <li><a href="/">About</a></li>
                         <li className="rightOut" onClick={this.props.logOutAction}><a>LogOut</a></li>
+                        <li className="rightOut">
+                            <div className="PhotoURL" style={{ background: 'url(%1) no-repeat'.replace('%1', this.props.user.photoURL),
+                                backgroundSize: 'contain'
+                            }}>
+
+                            </div>
+                        </li>
                     </div>
                     :
                     <li className="rightIn" onClick={this.props.logInAction}><a>LogIn</a></li>

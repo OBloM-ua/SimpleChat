@@ -55,7 +55,6 @@ class App extends Component {
                            logInAction={this.logIn.bind(this)} //передаю в гедер функції singIn signOut
                            logOutAction={this.logOut.bind(this)}
                 />
-
                 {this.state.user ?
                     <div>
                         <AppBody/>

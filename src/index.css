@@ -46,9 +46,16 @@ ul.AppHeader li.rightIn a:hover {
 ul.AppHeader li a.active {background-color: #4CAF50;}
 
 ul.AppHeader li.rightOut {
-  cursor: pointer;
-  float: right;
+
+    cursor: pointer;
+    float: right;
 }
+.PhotoURL{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
 ul.AppHeader li.rightIn {
   width: 120px;
   cursor: pointer;

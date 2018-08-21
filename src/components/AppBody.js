@@ -18,12 +18,13 @@ class AppBody extends Component {
             let messages = snapshot.val();
             let newState = [];
             for (let sms_id in messages) {
-                newState.push({
-                    id: sms_id,
-                    user: messages[sms_id].user,
-                    text: messages[sms_id].text,
-                    timestamp: messages[sms_id].timestamp
-                });
+                if (messages.hasOwnProperty(sms_id))
+                    newState.push({
+                        id: sms_id,
+                        user: messages[sms_id].user,
+                        text: messages[sms_id].text,
+                        timestamp: messages[sms_id].timestamp
+                    });
             }
             this.setState({
                 messages: newState
@@ -33,7 +34,7 @@ class AppBody extends Component {
 
     getMessages() {
         return this.state.messages.map(message => {
-             return <li key={message.id}>
+            return <li key={message.id}>
                 <Message message={message}/>
 
             </li>

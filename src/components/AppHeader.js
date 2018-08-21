@@ -12,10 +12,6 @@ class AppHeader extends Component {
 
 
     render() {
-        {
-            console.log(this.props.user);
-        } // https://lh5.googleusercontent.com/-_UkoFl2E8lw/AAAAAAAAAAI/AAAAAAAAfoU/KcUGTwdnIfg/photo.jpg
-
         return (
             <ul className="AppHeader">
 

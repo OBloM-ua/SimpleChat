@@ -1,9 +1,14 @@
 import React, {Component} from 'react';
 import '../index.css';
 import * as firebase from 'firebase';
+import PropTypes from "prop-types";
 
 
 class Footer extends Component {
+    static propTypes = { //Перевіряє що об'єкт отримує
+        user: PropTypes.object
+    };
+
     constructor(props) {
         super(props);
         this.state = {
@@ -14,7 +19,15 @@ class Footer extends Component {
     sendMessage() {
         if (this.state.text === '') return;
         const ref = firebase.database().ref('messages');
-        ref.push({text: this.state.text, timestamp: Date.now(), user:'test user'});
+        ref.push({
+            text: this.state.text,
+            timestamp: Date.now(),
+            user: {
+                photoURL: this.props.user.photoURL,
+                displayName: this.props.user.displayName
+            }
+        });
+
         console.log(this.state.text);
         this.setState({text: ''});
     }

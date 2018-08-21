@@ -58,7 +58,7 @@ class App extends Component {
                 {this.state.user ?
                     <div>
                         <AppBody/>
-                        <Footer/>
+                        <Footer user={this.state.user}/>
                     </div>
                     :
                     <div className="LoginText">Please LogIn

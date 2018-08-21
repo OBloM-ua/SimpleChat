@@ -4,6 +4,7 @@ import * as firebase from 'firebase';
 import Message from "./Message";
 
 class AppBody extends Component {
+
     constructor() {
         super();
         this.state = {

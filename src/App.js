@@ -31,11 +31,10 @@ class App extends Component {
         const provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider).then(function (result) {
             const user = result.user;
-            const ref = firebase.database().ref('users');
-            ref.push({displayName: user.displayName, email:  user.email, photoURL:  user.photoURL, uid:  user.uid});
-        }).catch(function (error) {
-            // Handle Errors here.
-        });
+            firebase.database().ref('users/' + user.uid).set({
+                displayName: user.displayName, email:  user.email, photoURL:  user.photoURL, uid:  user.uid
+            });
+        })
     }
 
     logOut() {

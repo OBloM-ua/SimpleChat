@@ -12,6 +12,7 @@ body {
 .AppBody {
   padding: 50px 0;
   height: 100%;
+  width: 100%;
   min-height: 726px;
   background-color: #6ae56a;
 }
@@ -121,7 +122,7 @@ input[type=text] {
   border-radius: 25px;
   border: 2px solid #033309;
   margin: 3px 25px;
-  width: 88%;
+  width: 80%;
   padding-left: 24px;
   padding-right: 24px;
 }

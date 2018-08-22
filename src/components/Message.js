@@ -13,7 +13,7 @@ class Message extends Component {
         return (
             <div className="Message">
                 <div>
-                    <img className='messageImg' src={this.props.message.user.photoURL} />
+                    <img className='messageImg' alt='defolt' src={this.props.message.user.photoURL} />
                     {this.props.message.user.displayName}
                     {moment( this.props.message.timestamp).format( "   MM-DD-YYYY HH:mm:ss")}
                 </div>

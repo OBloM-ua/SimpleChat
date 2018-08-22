@@ -4,7 +4,6 @@ import AppBody from "./components/AppBody";
 import Footer from "./components/Footer";
 import * as firebase from "firebase";
 
-
 class App extends Component {
     constructor(props) {
         super(props);
@@ -32,7 +31,7 @@ class App extends Component {
         firebase.auth().signInWithPopup(provider).then(function (result) {
             const user = result.user;
             firebase.database().ref('users/' + user.uid).set({
-                displayName: user.displayName, email:  user.email, photoURL:  user.photoURL, uid:  user.uid
+                displayName: user.displayName, email: user.email, photoURL: user.photoURL, uid: user.uid
             });
         })
     }

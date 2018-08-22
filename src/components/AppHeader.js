@@ -17,9 +17,9 @@ class AppHeader extends Component {
 
                 {this.props.user ?
                     <div>
-                        <li><a className="active" href="/">Home</a></li>
-                        <li><a href="/">Contact</a></li>
-                        <li><a href="/">About</a></li>
+                        <li><a className="active" href="/">Chat</a></li>
+                        <li><a href="https://github.com/OBloM-ua">My Git</a></li>
+                        <li><a href="/Contact">Contact</a></li>
                         <li className="rightOut" onClick={this.props.logOutAction}><a>LogOut</a></li>
                         <li className="rightOut">
                             <div className="PhotoURL" style={{ background: 'url(%1) no-repeat'.replace('%1', this.props.user.photoURL),

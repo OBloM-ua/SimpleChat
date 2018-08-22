@@ -34,10 +34,10 @@ class AppBody extends Component {
 
     getMessages() {
         return this.state.messages.map(message => {
-            return <li key={message.id}>
+            return <div key={message.id}>
                 <Message message={message}/>
 
-            </li>
+            </div>
 
         });
     }
@@ -45,9 +45,7 @@ class AppBody extends Component {
     render() {
         return (
             <div className="AppBody">
-                <ul>
                     {this.getMessages()}
-                </ul>
             </div>
         );
     }

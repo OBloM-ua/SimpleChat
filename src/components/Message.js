@@ -10,7 +10,7 @@ class Message extends Component {
     };
 
     checkMyMessage() {
-        if (this.props.message.user.displayName === this.props.user.displayName){
+        if (this.props.message.user.photoURL === this.props.user.photoURL){
             return 'my message';
         }
     }

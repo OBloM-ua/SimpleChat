@@ -2,8 +2,12 @@ import React, {Component} from 'react';
 import '../index.css';
 import * as firebase from 'firebase';
 import Message from "./Message";
+import PropTypes from "prop-types";
 
 class AppBody extends Component {
+    static propTypes = { //Перевіряє що об'єкт отримує
+        user: PropTypes.object
+    };
 
     constructor() {
         super();
@@ -35,8 +39,7 @@ class AppBody extends Component {
     getMessages() {
         return this.state.messages.map(message => {
             return <div key={message.id}>
-                <Message message={message}/>
-
+                <Message message={message} user={this.props.user}/>
             </div>
 
         });

@@ -56,11 +56,12 @@ class App extends Component {
                 />
                 {this.state.user ?
                     <div>
-                        <AppBody/>
+                        <AppBody user={this.state.user}/>
                         <Footer user={this.state.user}/>
                     </div>
                     :
-                    <div className="LoginText">Please login </div>}
+                    <div className="LoginText">Please login </div>
+                }
 
 
             </div>

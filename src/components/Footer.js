@@ -45,7 +45,6 @@ class Footer extends Component {
     render() {
         return (
             <div className="Footer">
-                Message:
                 <input type="text" onKeyPress={this.onClickEnter.bind(this)} value={this.state.text}
                        onChange={this.handleChange.bind(this)} placeholder="Enter your message"/>
                 <button className="inputButton" onClick={this.sendMessage.bind(this)}>Send</button>

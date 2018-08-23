@@ -82,7 +82,7 @@ input[type=text] {
   margin: 8px 13px;
   box-sizing: border-box;
   border: none;
-  background-color: #4caf50;
+  background-color: #097d17;
   color: white;
 }
 .PhotoURL{
@@ -100,7 +100,7 @@ input[type=text] {
 
 
 .inputButton{
-  background-color: #4CAF50;
+  background-color: #097d17;
   border: none;
   color: white;
   padding:15px 25px;

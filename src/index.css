@@ -17,15 +17,12 @@ body {
 }
 .gitButton{
   height: 100%;
-  width: 120px;
+  width: 50px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   cursor: pointer;
-  flex-direction: row-reverse;
 }
-.gitButton.a{color:white}
-
 .gitImg{
   background: url("./img/GitHub-Mark-Light-64px.png") no-repeat;
   background-size: contain;
@@ -35,14 +32,14 @@ body {
 }
 .rightOut{
   height: 100%;
-  width: 120px;
-  /*background-color: #5ecaff;*/
-  color: white;
+  width: 50px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  flex-direction: row-reverse;
-  justify-content: space-around;
   cursor: pointer;
+}
+.Logo{
+  color: white;
 }
 .AppHeaderLogin{
   background-color: #333;
@@ -98,7 +95,8 @@ input[type=text] {
 .googleImg{
   width: 44px;
   height: 44px;
-  background: url("./img/btn_google_light_normal_ios.svg"), no-repeat;
+  background: url("./img/btn_google_light_normal_ios.svg") no-repeat;
+  display: flex;
 }
 
 
@@ -116,7 +114,6 @@ input[type=text] {
   background-color: #4CAF50;
   height: 100vh;
   width: 100%;
-  /*font-family: fantasy;*/
   font-size: 350%;
   display: flex;
   justify-content: center;
@@ -138,5 +135,5 @@ input[type=text] {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-size: contain;
+  /*background-size: contain;*/
 }

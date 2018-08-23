@@ -18,11 +18,12 @@ class AppHeader extends Component {
                 {this.props.user ?
                     <div className="AppHeader">
                         <div className='gitButton'>
-                            <a href="https://github.com/OBloM-ua">My Git</a>
-                            <div className="gitImg"/>
+                            <a href="https://github.com/OBloM-ua">
+                                <div className="gitImg"/>
+                            </a>
                         </div>
+                        <div className='Logo'> <h3>Simple Chat</h3> </div>
                         <div className="rightOut" onClick={this.props.logOutAction}>
-                            LogOut
                             <div className="PhotoURL" style={{
                                 background: 'url(%1) no-repeat'.replace('%1', this.props.user.photoURL),
                                 backgroundSize: 'contain'
@@ -32,10 +33,14 @@ class AppHeader extends Component {
                     :
                     <div className="AppHeaderLogin" >
                         <div className='gitButton'>
-                            <a href="https://github.com/OBloM-ua">My Git</a>
-                            <div className="gitImg"/>
+                            <a href="https://github.com/OBloM-ua">
+                                <div className="gitImg"/>
+                            </a>
+
                         </div>
-                        <div className='rightOut' onClick={this.props.logInAction}> LogIn
+                        <div className='Logo'> <h3>Simple Chat</h3> </div>
+
+                        <div className='rightOut' onClick={this.props.logInAction}>
                             <div className="googleImg"  />
                         </div>
                     </div>

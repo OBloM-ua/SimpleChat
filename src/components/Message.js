@@ -12,12 +12,13 @@ class Message extends Component {
 
         return (
             <div className="Message">
-                <div>
-                    <img className='messageImg' alt='defolt' src={this.props.message.user.photoURL} />
-                    {this.props.message.user.displayName}
-                    {moment( this.props.message.timestamp).format( "   MM-DD-YYYY HH:mm:ss")}
+                <img className='messageImg' alt='defolt' src={this.props.message.user.photoURL}/>
+
+                <div className='nameAndMessage'>
+                    <div className='DisplayName'> {this.props.message.user.displayName}</div>
+                    <div className='MessageText'>{this.props.message.text}</div>
                 </div>
-                <div>{this.props.message.text}</div>
+                <div className='timeStamp'> {moment(this.props.message.timestamp).format(" HH:mm")} </div>
             </div>
         );
     }

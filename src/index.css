@@ -39,7 +39,7 @@ body {
   cursor: pointer;
 }
 .Logo{
-  color: white;
+  color: #4CAF50;
 }
 .AppHeaderLogin{
   background-color: #333;
@@ -123,11 +123,26 @@ input[type=text] {
 
 .Message{
   background-color: #097d17;
-  border-radius: 25px;
+  border-radius: 12px;
   border: 2px solid #033309;
   margin: 3px 10px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 3px 10px;
+  /*padding-left: 24px;*/
+  /*padding-right: 24px;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.nameAndMessage{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0 25px;
+}
+.DisplayName{
+  color: white;
+  /*background-color: #075910;*/
 }
 
 

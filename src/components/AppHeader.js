@@ -13,26 +13,35 @@ class AppHeader extends Component {
 
     render() {
         return (
-            <ul className="AppHeader">
+            <div>
 
                 {this.props.user ?
-                    <div>
-                        <li><a className="active" href="/">Chat</a></li>
-                        <li><a href="https://github.com/OBloM-ua">My Git</a></li>
-                        <li className="rightOut" onClick={this.props.logOutAction}><a>LogOut</a></li>
-                        <li className="rightOut">
-                            <div className="PhotoURL" style={{ background: 'url(%1) no-repeat'.replace('%1', this.props.user.photoURL),
+                    <div className="AppHeader">
+                        <div className='gitButton'>
+                            <a href="https://github.com/OBloM-ua">My Git</a>
+                            <div className="gitImg"/>
+                        </div>
+                        <div className="rightOut" onClick={this.props.logOutAction}>
+                            LogOut
+                            <div className="PhotoURL" style={{
+                                background: 'url(%1) no-repeat'.replace('%1', this.props.user.photoURL),
                                 backgroundSize: 'contain'
-                            }}>
-
-                            </div>
-                        </li>
+                            }}/>
+                        </div>
                     </div>
                     :
-                    <li className="rightIn" onClick={this.props.logInAction}><a>LogIn</a></li>
+                    <div className="AppHeaderLogin" >
+                        <div className='gitButton'>
+                            <a href="https://github.com/OBloM-ua">My Git</a>
+                            <div className="gitImg"/>
+                        </div>
+                        <div className='rightOut' onClick={this.props.logInAction}> LogIn
+                            <div className="googleImg"  />
+                        </div>
+                    </div>
                 }
 
-            </ul>
+            </div>
         );
     }
 }

@@ -60,9 +60,8 @@ class App extends Component {
                         <Footer user={this.state.user}/>
                     </div>
                     :
-                    <div className="LoginText">Please LogIn
+                    <div className="LoginText">Please login </div>}
 
-                    </div>}
 
             </div>
         );

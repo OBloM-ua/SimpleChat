@@ -4,16 +4,59 @@ body {
   font-family: sans-serif;
 }
 
-ul.AppHeader {
+.AppHeader {
+  background-color: #333;
   position: fixed;
   top: 0;
   width: 100%;
   height: 50px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: #333;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
+.gitButton{
+  height: 100%;
+  width: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  flex-direction: row-reverse;
+}
+.gitButton.a{color:white}
+
+.gitImg{
+  background: url("./img/GitHub-Mark-Light-64px.png") no-repeat;
+  background-size: contain;
+
+  width: 44px;
+  height: 44px;
+}
+.rightOut{
+  height: 100%;
+  width: 120px;
+  /*background-color: #5ecaff;*/
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.AppHeaderLogin{
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+
 .AppBody {
   width: 100%;
   height: 100%;
@@ -36,42 +79,6 @@ ul.AppHeader {
 }
 
 
-ul.AppHeader li {float: left;}
-
-ul.AppHeader li a {
-  display: block;
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-ul.AppHeader li a:hover {
-  background-color: #4CAF50;
-
-}
-ul.AppHeader li.rightIn a:hover {
-  background: url("img/btn_google_light_normal_ios.svg") no-repeat -1px ;
-
-}
-
-ul.AppHeader li a.active {background-color: #4CAF50;}
-
-ul.AppHeader li.rightOut {
-    cursor: pointer;
-    float: right;
-}
-
-
-ul.AppHeader li.rightIn {
-  width: 120px;
-  cursor: pointer;
-  float: right;
-  text-align: right;
-  background: url("img/btn_google_light_normal_ios.svg") no-repeat -1px ;
-}
-
-
-
 
 input[type=text] {
   width: 70%;
@@ -86,6 +93,12 @@ input[type=text] {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+}
+
+.googleImg{
+  width: 44px;
+  height: 44px;
+  background: url("./img/btn_google_light_normal_ios.svg"), no-repeat;
 }
 
 
@@ -103,8 +116,8 @@ input[type=text] {
   background-color: #4CAF50;
   height: 100vh;
   width: 100%;
-  font-family: fantasy;
-  font-size: 450%;
+  /*font-family: fantasy;*/
+  font-size: 350%;
   display: flex;
   justify-content: center;
   align-items: center;

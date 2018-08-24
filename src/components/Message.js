@@ -4,48 +4,35 @@ import PropTypes from 'prop-types';
 import * as moment from 'moment';
 
 class Message extends Component {
-    static propTypes = { //Перевіряє що об'єкт отримує
-        message: PropTypes.object,
-        user: PropTypes.object
-    };
+  static propTypes = { //Перевіряє що об'єкт отримує
+    message: PropTypes.object,
+    user: PropTypes.object
+  };
 
-    checkMyMessage() {
-        if (this.props.message.user.photoURL === this.props.user.photoURL){
-            return 'my message';
-        }
+  checkMyMessage() {
+    if (this.props.message.user.photoURL === this.props.user.photoURL) {
+      return 'my message';
     }
+  }
 
 
+  render() {
 
-    render() {
+    return (
+      <div>
+        <div className={this.checkMyMessage() ? 'MyMessage' : 'Message'}>
+          <img className='messageImg' alt='defolt' src={this.props.message.user.photoURL}/>
+          <div className='nameAndMessage'>
+            <div className='DisplayName'> {this.props.message.user.displayName}</div>
+            <div className='MessageText'>{this.props.message.text}</div>
+          </div>
+          <div className='timeStamp'> {moment(this.props.message.timestamp).format(" HH:mm")} </div>
+        </div>
 
-        return (
-            <div>
-                {this.checkMyMessage() ?
-                    <div className="MyMessage">
-                        <img className='messageImg' alt='defolt' src={this.props.message.user.photoURL}/>
+      </div>
 
-                        <div className='nameAndMessage'>
-                            <div className='DisplayName'> {this.props.message.user.displayName}</div>
-                            <div className='MessageText'>{this.props.message.text}</div>
-                        </div>
-                        <div className='timeStamp'> {moment(this.props.message.timestamp).format(" HH:mm")} </div>
-                    </div>
-                    :
-                    <div className="Message">
-                        <img className='messageImg' alt='defolt' src={this.props.message.user.photoURL}/>
-
-                        <div className='nameAndMessage'>
-                            <div className='DisplayName'> {this.props.message.user.displayName}</div>
-                            <div className='MessageText'>{this.props.message.text}</div>
-                        </div>
-                        <div className='timeStamp'> {moment(this.props.message.timestamp).format(" HH:mm")} </div>
-                    </div>
-                }
-            </div>
-
-        );
-    }
+    );
+  }
 }
 
 export default Message;

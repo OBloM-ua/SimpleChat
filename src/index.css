@@ -134,18 +134,6 @@ input[type=text] {
   align-items: center;
 }
 
-.MyMessage{
-  max-width: 600px;
-  background-color: #447d6e;
-  border-radius: 12px;
-  border: 2px solid #033309;
-  margin: 3px 10px;
-  padding: 3px 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
 .nameAndMessage{
   display: flex;
   justify-content: space-between;

@@ -19,8 +19,8 @@ class Message extends Component {
   render() {
     const isMyMessage = this.checkMyMessage();
     return (
-      <div style={isMyMessage ? {display: 'flex', justifyContent: 'flex-end'} : {display: 'flex'}}>
-        <div className={isMyMessage ? 'MyMessage' : 'Message'}>
+      <div style={isMyMessage ? {display: 'flex', justifyContent: 'flex-end'} : {display: 'flex'}}> {/*wich message side*/}
+        <div className='Message' style={isMyMessage ? {backgroundColor: '#447d6e'} : null}>{/*wich message color*/}
           <img className='messageImg' alt='defolt' src={this.props.message.user.photoURL}/>
           <div className='nameAndMessage'>
             <div className='DisplayName'> {this.props.message.user.displayName}</div>

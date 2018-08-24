@@ -38,10 +38,7 @@ class AppBody extends Component {
 
   getMessages() {
     return this.state.messages.map(message => {
-      return <div key={message.id}>
-        <Message message={message} user={this.props.user}/>
-      </div>
-
+      return <Message key={message.id} message={message} user={this.props.user}/>
     });
   }
 
@@ -50,7 +47,7 @@ class AppBody extends Component {
   //style={this.checkMyMessage() ? {alignItems: 'flex-end'} : {alignItems: 'flex-start'}}
   render() {
     return (
-      <div className="AppBody" >
+      <div className="AppBody">
         {this.getMessages()}
       </div>
     );

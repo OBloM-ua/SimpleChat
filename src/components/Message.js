@@ -17,10 +17,10 @@ class Message extends Component {
 
 
   render() {
-
+    const isMyMessage = this.checkMyMessage();
     return (
-      <div>
-        <div className={this.checkMyMessage() ? 'MyMessage' : 'Message'}>
+      <div style={isMyMessage ? {display: 'flex', justifyContent: 'flex-end'} : {display: 'flex'}}>
+        <div className={isMyMessage ? 'MyMessage' : 'Message'}>
           <img className='messageImg' alt='defolt' src={this.props.message.user.photoURL}/>
           <div className='nameAndMessage'>
             <div className='DisplayName'> {this.props.message.user.displayName}</div>
@@ -28,9 +28,7 @@ class Message extends Component {
           </div>
           <div className='timeStamp'> {moment(this.props.message.timestamp).format(" HH:mm")} </div>
         </div>
-
       </div>
-
     );
   }
 }

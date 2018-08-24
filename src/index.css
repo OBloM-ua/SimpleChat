@@ -122,13 +122,12 @@ input[type=text] {
 }
 
 .Message{
+  max-width: 600px;
   background-color: #097d17;
   border-radius: 12px;
   border: 2px solid #033309;
   margin: 3px 10px;
   padding: 3px 10px;
-  /*padding-left: 24px;*/
-  /*padding-right: 24px;*/
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -136,13 +135,12 @@ input[type=text] {
 }
 
 .MyMessage{
+  max-width: 600px;
   background-color: #447d6e;
   border-radius: 12px;
   border: 2px solid #033309;
   margin: 3px 10px;
   padding: 3px 10px;
-  /*padding-left: 24px;*/
-  /*padding-right: 24px;*/
   display: flex;
   flex-direction: row;
   justify-content: space-around;
